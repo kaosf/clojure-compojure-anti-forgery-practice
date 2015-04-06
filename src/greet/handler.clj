@@ -5,6 +5,8 @@
 
 (defroutes app-routes
   (GET "/" [] "Hello World")
+  (POST "/post_name" [first_name last_name]
+        (format "Hello, %s %s" first_name last_name))
   (route/not-found "Not Found"))
 
 (def app
